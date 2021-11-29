@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>调查问卷</title>
+    <style type="text/css">
+        .body1 {
+            line-height: 200%;
+            letter-spacing: 200%;
+            font-size: 20px;
+            margin: 0 auto;
+            width: 80%;
+            height: 500px;
+            position: absolute;
+            top: 0px;
+            left: 50%;
+            margin-left: -40%;
+        }
+
+        .title {
+            text-align: center;
+            margin: 0 auto;
+            letter-spacing: 180px;
+        }
+
+        button {
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="body1">
+    <div class="title">
+        <h2>调查问卷</h2>
+    </div>
+    <h4>
+        您好！非常感谢您在百忙之中抽空填写这份调查报告，这是一份社会实践问卷调查表，
+        主要是为了了解关于购房消费者事前购买商品房过程中所存在的问题（比如：虚假宣传、捂盘惜售、违规收取价外款、合同欺诈等等），
+        事中购房消费者者发现问题后如何协商解决问题的，事后购房消费者与开发商协商不成采取何种方式去维权，以及影响购房消费者维权意愿的因素有哪些。
+        本次问卷采用匿名的方式作答，您填写的答案不会披露给您本人以外的任何个人及企业，您的答案仅作为本次社会实践调研结果分析所用，请您根据自己的实际情况作答。
+        谢谢您的配合，祝您工作顺利，万事如意！</h4>
+    <form>
+
+        1、您的性别？ <br>
+        <input type="radio" name="set" value="male"/>
+        男
+        <input type="radio" name="set" value="female"/>
+        女 <br>
+        <br>
+        2、您的年龄？ <br>
+        <input type="radio" name="set" value="22"/>22以下
+        <input type="radio" name="age" value="22~35"/>23-35
+        <input type="radio" name="age" value="36~50"/>36-50
+        <input type="radio" name="age" value="51"/>51以上
+        <br>
+        <br>
+        3、您的最高学历？ <br>
+        <input type="radio" name="education" value="senior high"/>高中以下
+        <input type="radio" name="education" value="undergraduate"/>大学本科（含大专）
+        <input type="radio" name="education" value="graduate"/>研究生以上
+        <br>
+        <br>
+        4、您个人的月收入？ <br>
+        <input type="radio" name="income" value="4000"/>月收入4000以下
+        <input type="radio" name="income" value="4000~7000"/>月收入4000-7000
+        <input type="radio" name="income" value="7000~10000"/>月收入7000-10000
+        <input type="radio" name="income" value="10000"/>月收入10000以上
+        <br>
+        <br>
+        5、您所从事的行业？ <br>
+        <input type="radio" name="instudry" value="个体户"/>个体户
+        <input type="radio" name="instudry" value="民营企业"/>民营企业
+        <input type="radio" name="instudry" value="国营企业"/>国有企业
+        <input type="radio" name="instudry" value="事业单位"/>事业单位
+        <input type="radio" name="instudry" value="公务员"/>公务员
+        <input type="radio" name="instudry" value="自由职业"/>自由职业
+        <input type="radio" name="instudry" value="学生"/>学生
+        <input type="radio" name="instudry" value="22"/>其他
+        <br>
+        <br>
+        6、您购买商品房的目的是？ <br>
+        <input type="checkbox" name="purpose" value="给子女购买婚前财产"/>给子女购买婚前财产
+        <input type="checkbox" name="purpose" value="买房结婚"/>买房结婚
+        <input type="checkbox" name="purpose" value="改善住房条件"/>改善住房条件
+        <input type="checkbox" name="purpose" value="投资"/>投资
+        <input type="checkbox" name="purpose" value="22"/>
+        其他
+        <br>
+        <br>
+        7、您是通过什么渠道获取购房信息的？（多选）<br>
+        <input type="checkbox" name="信息渠道" value="户外广告"/>有户外广告（公交车广告、公交站广告、墙体广告、横幅等<br>
+        <input type="checkbox" name="信息渠道" value="网络广告"/>网络广告（各类APP、互联网系统、各类平台）<br>
+        <input type="checkbox" name="信息渠道" value="报纸广告"/>报纸广告<br>
+        <input type="checkbox" name="信息渠道" value="中介介绍"/>中介介绍<br>
+        <input type="checkbox" name="信息渠道" value="朋友介绍"/>朋友介绍<br>
+        <input type="checkbox" name="信息渠道" value="其他"/>其他
+        <br>
+        <br>
+        8、您在购房之前关注目标楼盘的哪些相关信息？（多选）<br>
+        <input type="checkbox" name="关注维度" value="房屋的地理位置、空间布局、划分结构等"/>房屋的地理位置、空间布局、划分结构等<br>
+        <input type="checkbox" name="关注维度" value="VR样板房、房屋模型、平面图、小区绿化、公摊面积、车位配比等"/>VR样板房、房屋模型、平面图、小区绿化、公摊面积、车位配比等<br>
+        <input type="checkbox" name="关注维度" value="房屋周围的配套设施"/>房屋周围的配套设施<br>
+        <input type="checkbox" name="关注维度" value="房屋在住建局备案的信息"/>房屋在住建局备案的信息<br>
+        <input type="checkbox" name="关注维度" value="其他"/>其他
+        <br>
+        <br>
+        9、您在了解房屋信息时开发商广告宣传及现场人员介绍是否有以下情况（多选）<br>
+        <input type="checkbox" name="set" value="价格模糊指向不明"/>价格模糊指向不明（比如：单价 21xxx起，总价3XXX起）<br>
+        <input type="checkbox" name="set" value="楼盘形象宣传与实际到访不相符"/>楼盘形象宣传与实际到访不相符<br>
+        <input type="checkbox" name="set" value="宣传升值回报或承诺投资稳赚"/>宣传升值回报或承诺投资稳赚（返还本金、售后包租、约定回购等）<br>
+        <input type="checkbox" name="set" value="包装商业产品导致误以为是住宅"/>包装商业产品导致误以为是住宅（商办公寓、商办写字楼住宅等）<br>
+        <input type="checkbox" name="set" value="宣传环境绿化率与实际不相符"/>宣传环境绿化率与实际不相符<br>
+        <input type="checkbox" name="set" value="实际装修与样板间不符合"/>实际装修与样板间不符合<br>
+        <input type="checkbox" name="set" value="口头承诺学区、商业配套，实际上不对口或遥遥无期"/>口头承诺学区、商业配套，实际上不对口或遥遥无期<br>
+        <input type="checkbox" name="set" value="样板房不在实体楼，尺寸比例与实际不符，或者通过家具布置造成假象"/>样板房不在实体楼，尺寸比例与实际不符，或者通过家具布置造成假象<br>
+        <input type="checkbox" name="set" value="模型与实际建筑物距离不符合，导致楼间距宽采光好等错觉"/>模型与实际建筑物距离不符合，导致楼间距宽采光好等错觉<br>
+        <input type="checkbox" name="set" value="宣传册未注明具体的户型尺寸比例"/>宣传册未注明具体的户型尺寸比例<br>
+        <input type="checkbox" name="set" value="隐瞒不利因素"/>隐瞒不利因素（附近加油站、能源站等规划，未来存在安全隐患）<br>
+        <input type="checkbox" name="set" value="买房赠送面积"/>买房赠送面积（赠送阳台、赠送飘窗、买一层送一层等）
+        <br>
+        <br>
+        10、当您前往售楼部时是否了解过以下信息？（多选）<br>
+        <input type="checkbox" name="了解楼部信息" value="土地使用权取得方式是否符合法定条件"/>土地使用权取得方式是否符合法定条件<br>
+        <input type="checkbox" name="了解楼部信息" value="商品房预售是否符合法定条件"/>商品房预售是否符合法定条件<br>
+        <input type="checkbox" name="了解楼部信息" value="楼盘项目不利因素公示表"/>楼盘项目不利因素公示表<br>
+        <input type="checkbox" name="了解楼部信息" value="案场销售房屋价格折扣体系"/>案场销售房屋价格折扣体系<br>
+        <input type="checkbox" name="了解楼部信息" value="楼部对个人信息采集"/>售楼部对个人信息采集<br>
+        <input type="checkbox" name="了解楼部信息" value="房屋销售控制表"/>房屋销售控制表<br>
+        <input type="checkbox" name="了解楼部信息" value="现场看房与宣传是否一致"/>现场看房与宣传是否一致<br>
+        <input type="checkbox" name="了解楼部信息" value="其他"/>其他
+        <br>
+        <br>
+        11、开发商及其相关是否变相收取价外款或变相提高首付款（多选）<br>
+        <input type="checkbox" name="额外款" value="团购费"/>团购费（比如3万抵95折5万抵10万，收款公司账户并非开发商）<br>
+        <input type="checkbox" name="额外款" value="买房的首付分期付款"/>买房的首付分期付款（实际分期期间需要支付利息）<br>
+        <input type="checkbox" name="额外款" value="缴纳茶水费"/>缴纳茶水费（要求缴纳现金、或将非合同资金打到非开发商账户上）<br>
+        <input type="checkbox" name="额外款" value="强制性以装修款为理由变相涨价"/>强制性以装修款为理由变相涨价<br>
+        <input type="checkbox" name="额外款" value="花钱做假流水"/>花钱做假流水（以银行流水不通过为理由要求花钱做假虚资金流水）<br>
+        <input type="checkbox" name="额外款" value="强制性捆绑消费"/>强制性捆绑消费（捆绑销售车位、储藏室等）<br>
+        <input type="checkbox" name="额外款" value="其他"/>其他
+        <br>
+        <br>
+        12、订立合同等相关文件时，您遇到过下列哪几类问题？（多选）<br>
+        <input type="checkbox" name="问题" value="合同主要条款缺失或约定不明确"/>合同主要条款缺失或约定不明确<br>
+        <input type="checkbox" name="问题" value="未将售楼广告中明示重要内容写进合同"/>未将售楼广告中明示重要内容写进合同<br>
+        <input type="checkbox" name="问题" value="未注明房屋及有关设施质量状况"/>未注明房屋及有关设施质量状况<br>
+        <input type="checkbox" name="问题" value="未明确约定房屋面积计算范围"/>未明确约定房屋面积计算范围<br>
+        <input type="checkbox" name="问题" value="未明确房产交付和办理过户登记手续具体期限"/>未明确房产交付和办理过户登记手续具体期限<br>
+        <input type="checkbox" name="问题" value="未明确约定商品房周边设施条款"/>未明确约定商品房周边设施条款<br>
+        <input type="checkbox" name="问题" value="未明确约定物业管理问题"/>未明确约定物业管理问题<br>
+        <input type="checkbox" name="问题" value="未签定正式书面房屋买卖合同，仅以口头约定方式达成协议"/>未签定正式书面房屋买卖合同，仅以口头约定方式达成协议<br>
+        <input type="checkbox" name="问题" value="写明合同购房款不进入监管资金账户"/>写明合同购房款不进入监管资金账户<br>
+        <input type="checkbox" name="问题" value="加大购房者的责任，规避开发商自身责任"/>加大购房者的责任，规避开发商自身责任<br>
+        <input type="checkbox" name="问题" value="宣传时所承诺的装修等材料以模糊概念或并未具体标明品牌写入合同中"/>宣传时所承诺的装修等材料以模糊概念或并未具体标明品牌写入合同中<br>
+        <input type="checkbox" name="问题" value="宣传时所提及的车位配比、绿化率等具体信息并未写入购房合同中"/>宣传时所提及的车位配比、绿化率等具体信息并未写入购房合同中<br>
+        <input type="checkbox" name="问题" value="小区共有财产界限不明确"/>小区共有财产界限不明确<br>
+        <input type="checkbox" name="问题" value="其他"/>其他
+        <br>
+        <br>
+        13、对于合同中的各类条款，您是否有全部阅读并理解的能力？<br>
+        <input type="radio" name="理解程度" value="完全理解"/>完全理解<br>
+        <input type="radio" name="理解程度" value="理解较多"/>理解较多<br>
+        <input type="radio" name="理解程度" value="理解较少"/>理解较少<br>
+        <input type="radio" name="理解程度" value="完全不理解"/>完全不理解
+        <br>
+        <br>
+        14、开发商相关人员是否在买房过程中详细介绍合同各类条款？<br>
+        <input type="radio" name="是否详细介绍条款" value="完全不理解"/>完全不理解<br>
+        <input type="radio" name="是否详细介绍条款" value="详细介绍全部条款"/>详细介绍全部条款<br>
+        <input type="radio" name="是否详细介绍条款" value="选择性规避对开发商责任条款的介绍"/>选择性规避对开发商责任条款的介绍<br>
+        <input type="radio" name="是否详细介绍条款" value="对购房者权益条款没有重点的提示行介绍"/>对购房者权益条款没有重点的提示行介绍<br>
+        <input type="radio" name="是否详细介绍条款" value="笼统性介绍"/>笼统性介绍
+        <br>
+        <br>
+        15、当您对合同的条款提出质疑时，开发商是否同意修改合同？<br>
+        <input type="radio" name="是否同意修改合同" value="同意，全部按照双方的意思来修改"/>同意，全部按照双方的意思来修改<br>
+        <input type="radio" name="是否同意修改合同" value="同意，只按照开发商个人意愿修改"/>同意，只按照开发商个人意愿修改<br>
+        <input type="radio" name="是否同意修改合同" value="不同意，以制式合同等形式变相不修改"/>不同意，以制式合同等形式变相不修改
+        <br>
+        <br>
+        16、如果因合同不合理而拒绝签订合同导致无法退还定金，您可能会怎么做？（多选）<br>
+        <input type="checkbox" name="做法" value="静观其他业主的动向，看看最终结果再行动"/>静观其他业主的动向，看看最终结果再行动<br>
+        <input type="checkbox" name="做法" value="当做自己吃亏，多一事不如少一事"/>当做自己吃亏，多一事不如少一事<br>
+        <input type="checkbox" name="做法" value="与开发商协商退回定金"/>与开发商协商退回定金<br>
+        <input type="checkbox" name="做法" value="联合其他的业主共同维权"/>联合其他的业主共同维权<br>
+        <input type="checkbox" name="做法" value="找到相关的职能部门去维护自身的权利"/>找到相关的职能部门去维护自身的权利<br>
+        <input type="checkbox" name="做法" value="咨询律师"/>咨询律师<br>
+        <input type="checkbox" name="做法" value="向法院起诉"/>向法院起诉<br>
+        <input type="checkbox" name="做法" value="其他"/>其他
+        <br>
+        <br>
+        17、您对房屋的“五证一书”对于预售房屋（期房）的重要性是否了解过？<br>
+        <input type="radio" name="是否了解“五证一书”" value="有比较详细的了解"/>有比较详细的了解<br>
+        <input type="radio" name="是否了解“五证一书”" value="仅仅听说过，具体不是很了解"/>仅仅听说过，具体不是很了解<br>
+        <input type="radio" name="是否了解“五证一书”" value="基本不了解"/>基本不了解
+        <br>
+        <br>
+        18、在交房验收过程中，是否了解流程？<br>
+        <input type="radio" name="是否了解流程" value="了解"/>了解<br>
+        <input type="radio" name="是否了解流程" value="比较了解"/>比较了解<br>
+        <input type="radio" name="是否了解流程" value="不是很了解"/>不是很了解<br>
+        <input type="radio" name="是否了解流程" value="完全不了解"/>完全不了解
+        <br>
+        <br>
+        19、您在验收房屋时遇到过那些问题？（多选）<br>
+        <input type="checkbox" name="验收房问题" value="开发商要求先签字后验房"/>开发商要求先签字后验房<br>
+        <input type="checkbox" name="验收房问题" value="延迟交房"/>延迟交房<br>
+        <input type="checkbox" name="验收房问题" value="房屋建筑质量不合格"/>房屋建筑质量不合格<br>
+        <input type="checkbox" name="验收房问题" value="小区的公共设施与宣传不符"/>小区的公共设施与宣传不符<br>
+        <input type="checkbox" name="验收房问题" value="其他"/>其他
+        <br>
+        <br>
+        20、房屋交付使用期间遇到过一下哪几类问题？（多选）<br>
+        <input type="checkbox" name="使用期间的问题" value="开发商的问题"/>开发商的问题（房屋结构、质量等问题）<br>
+        <input type="checkbox" name="使用期间的问题" value="相关政府部门的问题"/>相关政府部门的问题（水、电、气供应等问题）<br>
+        <input type="checkbox" name="使用期间的问题" value="物业的问题"/>物业的问题（物业收集住户相关信息实施非法行为；设施维护费用被私吞；公共设施的收益去向不明等问题）<br>
+        <input type="checkbox" name="使用期间的问题" value="业主的问题"/>业主的问题（别的业主私自改装房屋等）<br>
+        <input type="checkbox" name="使用期间的问题" value="其他"/>其他
+        <br>
+        <br>
+        21、您在验收房屋和使用房屋时倘若遇到问题，是怎么处理的？（多选）<br>
+        <input type="checkbox" name="问题处理方法" value="跟开发商理论"/>跟开发商理论<br>
+        <input type="checkbox" name="问题处理方法" value="向有关部门投诉"/>向有关部门投诉<br>
+        <input type="checkbox" name="问题处理方法" value="集体维权"/>集体维权<br>
+        <input type="checkbox" name="问题处理方法" value="向媒体曝光"/>向媒体曝光<br>
+        <input type="checkbox" name="问题处理方法" value="咨询律师"/>咨询律师<br>
+        <input type="checkbox" name="问题处理方法" value="其他"/>其他
+        <br>
+        <br>
+        22、您购房维权的时候通常选择什么方式寻求相关部门的帮助？（多选）<br>
+        <input type="checkbox" name="求助部门" value="拨打12345市长/消费者服务热线"/>拨打12345市长/消费者服务热线<br>
+        <input type="checkbox" name="求助部门" value="去当地税务局"/>去当地税务局<br>
+        <input type="checkbox" name="求助部门" value="房管局"/>房管局<br>
+        <input type="checkbox" name="求助部门" value="物价局"/>物价局<br>
+        <input type="checkbox" name="求助部门" value="人民法院"/>人民法院<br>
+        <input type="checkbox" name="求助部门" value="环保局"/>环保局<br>
+        <input type="checkbox" name="求助部门" value="道路交通局"/>道路交通局<br>
+        <input type="checkbox" name="求助部门" value="规划局"/>规划局<br>
+        <input type="checkbox" name="求助部门" value="人民检察院"/>人民检察院<br>
+        <input type="checkbox" name="求助部门" value="市场监督管理局"/>市场监督管理局<br>
+        <input type="checkbox" name="求助部门" value="其他"/>其他
+        <br>
+        <br>
+        23、您在参与集体维权的过程中是怎么做的？（多选）<br>
+        <input type="checkbox" name="维权方法" value="破坏售楼部设施"/>破坏售楼部设施<br>
+        <input type="checkbox" name="维权方法" value="拉横幅"/>拉横幅<br>
+        <input type="checkbox" name="维权方法" value="业主聚集向开发商提诉求"/>业主聚集向开发商提诉求<br>
+        <input type="checkbox" name="维权方法" value="静观其他业主的动向，看看最终结果再行动"/>静观其他业主的动向，看看最终结果再行动<br>
+        <input type="checkbox" name="维权方法" value="当做自己吃亏，多一事不如少一事"/>当做自己吃亏，多一事不如少一事<br>
+        <input type="checkbox" name="维权方法" value="与开发商协商退回定金"/>与开发商协商退回定金<br>
+        <input type="checkbox" name="维权方法" value="联合其他的业主共同维权"/>联合其他的业主共同维权<br>
+        <input type="checkbox" name="维权方法" value="其他"/>其他
+        <br>
+        <br>
+        24、您周围的相关人员或自身在购买房屋出现问题时不愿意参加维权的原因是什么？（多选）<br>
+        <input type="checkbox" name="不愿维权的原因" value="维权成本太高"/>维权成本太高<br>
+        <input type="checkbox" name="不愿维权的原因" value="没有找到维权的渠道"/>没有找到维权的渠道<br>
+        <input type="checkbox" name="不愿维权的原因" value="感觉对维权没看不到希望"/>感觉对维权没看不到希望<br>
+        <input type="checkbox" name="不愿维权的原因" value="感觉组织构架不完善，无法与开发商抗衡"/>感觉组织构架不完善，无法与开发商抗衡<br>
+        <input type="checkbox" name="不愿维权的原因" value="希望可以维权但是自己个人知识淡薄"/>希望可以维权但是自己个人知识淡薄<br>
+        <input type="checkbox" name="不愿维权的原因" value="不想参与维权，但希望别人参与去为自己争取住户的权利"/>不想参与维权，但希望别人参与去为自己争取住户的权利
+        <br>
+        <br>
+        25、您在购房的过程中希望获得哪些方面的帮助？<br>
+        <textarea name="info" rows="5" cols="100" wrap="virtual"></textarea>
+        <button>重置</button>
+        <button>提交</button>
+    </form>
+</div>
+</body>
+</html>

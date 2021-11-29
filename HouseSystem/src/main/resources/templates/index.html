@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+
+    <script th:src="@{https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js}"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+          integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+            integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+            crossorigin="anonymous"></script>
+    <!--<script type="text/javascript">
+        function gotoCase() {
+            $(".more").click(function () {
+
+            })
+        }
+    </script>-->
+
+</head>
+<body>
+
+<!--<div th:replace="~{/commons/menu::menu}"></div>-->
+<div id="wrapper">
+    <div class="nav">
+        <div class="nav-right"><img th:src="@{/img/IndexImg/logo.png}" alt=""></div>
+        <div class="nav-left">
+            <ul>
+                <li><a href="#">首 页</a></li>
+                <li>
+                    <a href="#">维权</a>
+                </li>
+                <li><a href="#">购房流程</a></li>
+                <li><a href="#">房价分析预测</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li>
+                    <a th:unless="${session.loginUser}" th:href="@{/login}">登 录</a>
+                    <p th:if="${session.loginUser}">[[${session.loginUser.Uid}]]</p>
+                </li>
+                <li>
+                    <a th:href="@{/Qnn}" th:if="${session.loginUser}">填写问卷</a>
+                    <a th:href="@{/regist}" th:unless="${session.loginUser}">注 册</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 轮播图 -->
+    <div class="box">
+        <div class="box-pic">
+            <ul class="pic-ul">
+                <li class="b-img">
+                    <img th:src="@{/img/IndexImg/1.jpg}">
+                </li>
+                <li class="b-img">
+                    <img th:src="@{/img/IndexImg/2.jpg}">
+                </li>
+                <li class="b-img">
+                    <img th:src="@{/img/IndexImg/3.jpg}">
+                </li>
+                <li class="b-img">
+                    <img th:src="@{/img/IndexImg/4.jpg}">
+                </li>
+                <li class="b-img">
+                    <img th:src="@{/img/IndexImg/5.jpg}">
+                </li>
+                <li class="b-img">
+                    <img th:src="@{/img/IndexImg/6.jpg}">
+                </li>
+                <li class="b-img">
+                    <img th:src="@{/img/IndexImg/1.jpg}">
+                </li>
+            </ul>
+        </div>
+        <div class="box-cir">
+            <div class="cir-ul">
+                <i class="cir-change"></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+        <div class="btn">
+            <span class="btn-left">&lt;</span>
+        </div>
+        <div class="btn">
+            <span class="btn-right">&gt;</span>
+        </div>
+    </div>
+    <div class="resolve">
+        <img th:src="@{/img/IndexImg/7.jpg}" alt="">
+    </div>
+
+    <!--维权案例分析-->
+    <div class="case">
+        <div class="case_title">
+            <h3>往期案例</h3>
+            <p>你可以了解到过往我们处理过的案例！</p>
+        </div>
+        <div class="case_new">
+            <div class="case_example">
+                <div class="mr">
+                    <h3>入住后发现与房东要求加收物业费</h3>
+                    <span class="time">2021-11-27 13:56:18</span>
+                    <div class="case_info">
+                        <p>在入住后发现房东无故要求加收房费，住户不交就停水电。在入住后发现房东无故要求加收房费，住户不交就停水电</p>
+                        <img th:src="@{/img/IndexImg/news1.jpg}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="case_example">
+                <div class="mr">
+                    <h3>入住后发现与房东要求加收物业费</h3>
+                    <span class="time">2021-11-27 13:56:18</span>
+                    <div class="case_info">
+                        <p>在入住后发现房东无故要求加收房费，住户不交就停水电。在入住后发现房东无故要求加收房费，住户不交就停水电</p>
+                        <img th:src="@{/img/IndexImg/news1.jpg}" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="case_example">
+                <div class="mr">
+                    <h3>入住后发现与房东要求加收物业费</h3>
+                    <span class="time">2021-11-27 13:56:18</span>
+                    <div class="case_info">
+                        <p>在入住后发现房东无故要求加收房费，住户不交就停水电。在入住后发现房东无故要求加收房费，住户不交就停水电</p>
+                        <img th:src="@{/img/IndexImg/news1.jpg}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="more">
+            <button>
+                <a th:href="@{/case}" style="text-decoration: none;color: black">了解更多</a>
+            </button>
+        </div>
+    </div>
+
+    <div class="call">
+        <h3>申请获得相关法律援助</h3>
+        <div class="info">
+            <div class="head"><h5>称呼:</h5><input type="text" placeholder="请输入你的称呼"></div>
+            <div class="head"><h5>电话:</h5><input type="text" placeholder="请输入你的手机号"></div>
+            <h5>具体维权方向:</h5>
+            <input type="text" placeholder="请输入">
+            <div class="btn">
+                <button>立即预约</button>
+            </div>
+        </div>
+    </div>
+    <div class="kefu">
+        <button>在线立即查询</button>
+    </div>
+    <div class="our_info">
+        <h3>联系我们</h3>
+        <ul class="info_contain">
+            <li>
+                <div class="location1">公司地址：&nbsp;&nbsp;&nbsp;广东省珠海市金湾区珠海科技学院</div>
+            </li>
+            <li>
+                <div class="email">邮箱：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10086@qq.com</div>
+            </li>
+            <li>
+                <div class="number">电话：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13417155123</div>
+            </li>
+        </ul>
+    </div>
+    <div class="foot">
+        <div class="icon">
+            <div>
+                <i class="iconfont">&#xe648;</i>
+                <span>有保标有保障</span>
+            </div>
+            <div>
+                <i class="iconfont">&#xe74f;</i>
+                <span>30天保障有效</span>
+            </div>
+            <div>
+                <i class="iconfont">&#xe61b;</i>
+                <span>全面保障更放心</span>
+            </div>
+            <div>
+                <i class="iconfont">&#xe6c9;</i>
+                <span>登录百度账号</span>
+            </div>
+        </div>
+        <div class="foot_nav">
+            <ul>
+                <li>首页</li>
+                <li>公司介绍</li>
+                <li>软件服务</li>
+                <li>风险预估</li>
+                <li>问卷调查</li>
+                <li>关于我们</li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <span>地址：&nbsp;广东省珠海市金湾区三灶镇</span>
+            <span>copyright@XXXXXX有限公司</span>
+        </div>
+    </div>
+</div>
+</div>
+<script th:src="@{/js/lbt.js}"></script>
+<script th:src="@{/js/tool.js}"></script>
+</body>
+</html>
